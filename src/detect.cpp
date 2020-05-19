@@ -28,11 +28,11 @@ int main(int argc, char** argv) {
     int h_min = 40;
     int h_max = 80;
 
-    nh.param("overlay", overlay, overlay);
-    nh.param("debug", debug, debug);
-    nh.param("rate", rate, rate);
-    nh.param("h_min", h_min, h_min);
-    nh.param("h_max", h_max, h_max);
+    nh.sam("overlay", overlay, overlay);
+    nh.sam("debug", debug, debug);
+    nh.sam("rate", rate, rate);
+    nh.sam("h_min", h_min, h_min);
+    nh.sam("h_max", h_max, h_max);
 
     ros::Subscriber image_sub = nh.subscribe("image_raw", 1, imageCallback);
 
