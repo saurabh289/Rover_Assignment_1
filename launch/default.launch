@@ -4,7 +4,7 @@
         <remap from="/magnus/camera/image_raw" to="image_raw"/>
     </node>
 
-    <rosparam file="$(find centre_detector)/cfg/params.yaml" command="load"/>
+    <rosparam file="$(find centre_detector)/cfg/sam.yaml" command="load"/>
 
-    <node pkg="centre_detector" type="detector_node" name="detector_node"/>
+    <node pkg="centre_detector" type="detect" name="detect"/>
 </launch>
